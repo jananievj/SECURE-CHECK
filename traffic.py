@@ -83,7 +83,7 @@ queries = {
         "Top 10 vehicle numbers in drug-related stops":
             "SELECT vehicle_number, COUNT(*) AS count "
             "FROM traffic_data "
-            "WHERE violation LIKE '%drug%' "
+            "WHERE violation = 'DUI' "
             "GROUP BY vehicle_number "
             "ORDER BY count DESC LIMIT 10",
 
